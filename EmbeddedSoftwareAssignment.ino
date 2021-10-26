@@ -13,7 +13,7 @@ void loop() {
 
   delay(20);
 
-  brightness = ldrValue/4;
+  brightness = map(ldrValue, 0, 1023, 255, 0);
   analogWrite(5, brightness); 
   Serial.println(brightness);
 
